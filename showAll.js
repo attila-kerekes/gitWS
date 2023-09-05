@@ -6,6 +6,11 @@
 const getBeers = require('./data')
 
 function main() {
+  const beeers = getBeers()
+
+  for (const beer of beeers) {
+    console.log(`Beer: ${beer.name}`)
+  }
 }
 
 main()
