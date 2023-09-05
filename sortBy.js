@@ -18,6 +18,12 @@ const getBeers = require('./data')
 function main(property) {
     console.log('property:', property)
 
+    const beers = [...getBeers()]
+    beers.sort((a, b) => a.score > b.score ? 1 : -1)
+
+    for (const beer of beers) {
+        console.log(`${beer.name} ${beer.score}`)
+    }
 }
 
 main(process.argv[2])
